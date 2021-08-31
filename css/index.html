@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-rows: 76px 84px 84px;
+            grid-template-columns: 1fr 3fr 1fr;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            row-gap: 12px;
+            column-gap: 12px;
+            height: 94vh;
+            width: 99vw;
+        }
+
+        .item {
+            background-color: rgb(231, 255, 232);
+            color: tomato;
+            display: flex;
+            /* width: 200px;
+            height: 100px; */
+        }
+
+        .item:first-child {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        /* .item:nth-child(2) {
+            grid-column-start: 3;
+            grid-column-end: 5;
+        } */
+
+        /* navbar css start */
+        .dropbtn {
+    color: rgb(0, 0, 0);
+    /* text-align: center; */
+    padding: 0px 22px;
+    text-decoration: none;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown {
+    display: inline-block;
+  }
+    .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    /* text-align: left; */
+  }
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 45px;
+    /* text-align: right; */
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 16px;
+    margin: 5px 7px;
+    cursor: pointer;
+    border-radius: 20px;
+
+  }
+  .button1 {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    /* text-align: center; */
+    text-decoration: none;
+    /* display: inline-block; */
+    /* font-size: 16px; */
+    margin: 5px 66px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+  .button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  } 
+  .button1:hover{
+    background-color: #4CAF50; /* Green */
+    color: white;    
+  }
+        /* navbar css start */
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="item">
+            <!-- navbar start -->
+                <ul class="disp">
+                    <li class="dropdown">
+                        <a href="#"><img src="../assets/icon.png" style="width:30px;height:30px;"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">tutorials</a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </li>
+                    <li class="dropdown ">
+                        <a href="javascript:void(0)" class="dropbtn">refrence</a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">excercise</a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="item">
+                    <ul>
+                        <li>
+                            <button class="button1">spaces</button>
+                            <button class="button1">paid corces</button>
+                            <button class="button">log in</button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- navbar end -->
+        </div>
+
+        <div class="item">this is item 3</div>
+        <div class="item">this is item 4</div>
+        <div class="item">this is item 5</div>
+        <div class="item">this is item 6</div>
+        <div class="item">this is item 7</div>
+        <div class="item">this is item 8</div>
+        <div class="item">this is item 9</div>
+    </div>
+</body>
+
+</html>
